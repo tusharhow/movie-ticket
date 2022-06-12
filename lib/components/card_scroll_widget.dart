@@ -37,7 +37,7 @@ class _CardScrollWidgetState extends State<CardScrollWidget> {
         var horizontalInset = primaryCardLeft / 2;
 
         List<Widget> cardList = [];
-
+ 
         for (var i = 0; i < images.length; i++) {
           var delta = i - widget.currentPage;
           bool isOnRight = delta > 0;

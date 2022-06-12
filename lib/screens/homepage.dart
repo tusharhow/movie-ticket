@@ -16,7 +16,7 @@ var widgetAspectRatio = cardAspectRatio * 1.2;
 
 class _MyAppState extends State<MyApp> {
   var currentPage = images.length - 1.0;
-
+  final TextEditingController _searchContrller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     PageController controller = PageController(initialPage: images.length - 1);
@@ -87,9 +87,28 @@ class _MyAppState extends State<MyApp> {
                       child: SizedBox(
                         height: 50,
                         child: TextFormField(
+                          controller: _searchContrller,
                           decoration: InputDecoration(
-                            suffixIcon: const Icon(
-                              Icons.search,
+                            suffixIcon: IconButton(
+                              onPressed: () {
+                             
+                                if (_searchContrller.text == title[0]) {
+                                  controller.jumpToPage(0);
+                                } else if (_searchContrller.text == title[1]) {
+                                  controller.jumpToPage(1);
+                                } else if (_searchContrller.text == title[2]) {
+                                  controller.jumpToPage(2);
+                                } else if (_searchContrller.text == title[3]) {
+                                  controller.jumpToPage(3);
+                                } else if (_searchContrller.text == title[4]) {
+                                  controller.jumpToPage(4);
+                                } else if (_searchContrller.text == title[5]) {
+                                  controller.jumpToPage(5);
+                                } else if (_searchContrller.text == title[6]) {
+                                  controller.jumpToPage(6);
+                                }
+                              },
+                              icon: const Icon(Icons.search),
                               color: Colors.white,
                             ),
                             border: InputBorder.none,
@@ -112,6 +131,10 @@ class _MyAppState extends State<MyApp> {
                                 width: 1.0,
                               ),
                             ),
+                          ),
+                          style: const TextStyle(
+                            color: Colors.white54,
+                            fontSize: 15.0,
                           ),
                         ),
                       ),

@@ -3,8 +3,6 @@ import '../components/date_picker.dart';
 import '../components/screen_picker.dart';
 import '../components/time_picker.dart';
 
-
-
 class DetailsPage extends StatefulWidget {
   const DetailsPage({Key? key, required this.title}) : super(key: key);
   final String title;
@@ -12,7 +10,6 @@ class DetailsPage extends StatefulWidget {
   @override
   State<DetailsPage> createState() => _DetailsPageState();
 }
-
 
 class _DetailsPageState extends State<DetailsPage> {
   @override
